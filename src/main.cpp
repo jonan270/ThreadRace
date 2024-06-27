@@ -42,6 +42,7 @@ static void threads_qualifying(std::vector<int>& thread_indices)
     {
         std::cout << i + 1 << ": " << thread_indices[i] + 1 << "\n";
     }
+    std::flush(std::cout);
 }
 
 int main()
