@@ -7,14 +7,14 @@
 
 static void race_track(int car_index)
 {
-    constexpr static float s_TrackLength = 1e6;
-    float progress = 0.0f;
+    constexpr static size_t s_TrackLength = static_cast<size_t>(1e9);
+    size_t progress = 0;
 
     while (progress < s_TrackLength)
     {
-        progress += sqrtf(2.0f);
+        progress += static_cast<size_t>(sqrtf(2.0f));
     }
-    std::cout << car_index + 1 << "\n";
+    std::cout << car_index + 1 << std::endl;
     return;
 }
 
